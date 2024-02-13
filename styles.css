@@ -114,11 +114,11 @@ button:active{
 
 #hearts-bg{
     position: absolute;
-    width: 90vw;
+    width: 100vw;
     height: auto;
 
     top: 100vh;
-    left: 5vw;
+    left: 0;
     z-index: -2;
 
     transition: top 5s;
