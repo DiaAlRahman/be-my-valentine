@@ -1,0 +1,170 @@
+:root{
+    --font-color: #FF5C58;
+    --background-color: #FFEDD3;
+    --secondary-bg: #FCD2D1;
+    --border-color: #FE8F8F;
+}
+
+@font-face {
+    font-family: romantic-couple;
+    src: url(./fonts/RomanticCouple/RomanticCouple.woff2);
+}
+
+@font-face {
+    font-family: type-keys;
+    src: url(./fonts/TypeKeys-e1Kl.ttf);
+}
+
+*{
+    font-family: romantic-couple;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--font-color);    
+
+    margin: 0;
+    padding: 0 5rem;
+
+    transition: background-color 5s;
+}
+
+section.ask-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+    gap: 2rem;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    transition: all 3s;
+}
+
+section.ask-name.fade-out{
+    opacity: 0;
+    min-height: 50vh;
+}
+
+input{
+    font-size: 1.5rem;
+    font-weight: 800;
+    
+    color: var(--font-color);
+    border: solid 1px var(--border-color);
+    border-radius: 2rem;
+
+    padding: 10px 1rem;
+
+    background-color: var(--secondary-bg);
+}
+
+input:focus{
+    outline-color: #FF5C58;
+    border-width: 3px;
+}
+
+input::placeholder{
+    color: var(--border-color);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    margin: 10px 0;
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 800;
+
+    border: var(--border-color) solid 2px;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+}
+
+button:active{
+    background-color: var(--font-color);
+    color: var(--background-color);
+}
+
+#corner-image{
+    position: absolute;
+    width: 15vw;
+    height: auto;
+
+    bottom: 20px;
+    right: 100px;
+
+    z-index: -1;
+}
+
+#hearts-bg{
+    position: absolute;
+    width: 90vw;
+    height: auto;
+
+    top: 100vh;
+    left: 5vw;
+    z-index: -2;
+
+    transition: top 5s;
+}
+
+#hearts-bg.fade-in{
+    top: 0;
+}
+
+#hidden-text{
+    position: absolute;
+
+    bottom: 150px;
+    right: 100px;
+
+
+    color: black;
+    font-size: 1rem;
+    font-weight: 800;
+
+    opacity: 0;
+
+    transition: opacity 3s;
+}
+
+#hidden-text.fade-in{
+    opacity: 1;
+}
+
+#hidden-text.fade-out{
+    opacity: 0;
+}
+
+#love-letter{
+    position: absolute;
+    top: 5vh;
+    left: 10vw;
+
+    color: black;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+    opacity: 0;
+}
+
+#love-letter.fade-in{
+    opacity: 1;
+    transition: opacity 3s;
+}
